@@ -30,6 +30,7 @@ A literal object.
  }
 
  console.log(dog);
+ dog.speak();
 
 
 /*
@@ -44,6 +45,9 @@ An empty object
             
   Console.log the object.
 */
+
+var kicks = {};
+
 
 
 /* 
