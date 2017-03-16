@@ -48,6 +48,15 @@ An empty object
 
 var kicks = {};
 
+kicks.brand = "adidas";
+kicks.color = "red";
+kicks.size = 8;
+kicks.buy = function(){
+  console.log("Hell Yeah!");
+}
+
+console.log(kicks);
+kicks.buy();
 
 
 /* 
