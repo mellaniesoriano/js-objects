@@ -24,13 +24,13 @@ A literal object.
   vegeterian: false,
   color: ["brown", "white"],
   speak: function(){
-    console.log("woof!");
+    return "woof!";
   }
 
  }
 
- console.log(dog);
- dog.speak();
+ console.log("My dog " + dog.name + " is " + dog.age + " years old likes to " + dog.speak());
+
 
 
 /*
@@ -52,11 +52,11 @@ kicks.brand = "adidas";
 kicks.color = "red";
 kicks.size = 8;
 kicks.buy = function(){
-  console.log("Hell Yeah!");
+  return "Hell Yeah!";
 }
 
 console.log(kicks);
-kicks.buy();
+console.log(kicks.buy());
 
 
 /* 
@@ -203,6 +203,41 @@ console.log(completePerson.age);
     total: "194.33"
   }
 ];
+/*
+   Display values of objects that are inside an array
+   Declare a new variable named `arrayOfObjects` and set it to be [this array of objects
+   (https://gist.github.com/sgnl/958adf99007329d2e4ff).
+
+   Declare a new function named `printProcessedOrders`and set one parameter called `orders`. Within this function you 
+   will return a string that prints the order details to the page in the following format.
+
+        Example output:
+            =====
+            id:  0
+            purchase date:  Monday Jan 25 2015 2:01 PM
+            purchase total:  279.38
+            =====
+            id:  1
+            purchase date:  Monday Jan 27 2015 11:31 AM
+            purchase total:  79.80
+            =====
+            id:  2
+            purchase date:  Monday Feb 1 2015 7:56 AM
+            purchase total:  15.62
+            =====
+            ...
+ */
+
+function printProcessedOrders(orders){
+  for(var i = 0; i<orders.length; i++){
+    console.log("======");
+    console.log("id: " + orders[i].id);
+    console.log("purchase date: " + orders[i].date);
+    console.log("purchase total: " + orders[i].total);
+  }
+}
+
+printProcessedOrders(arrayOfObjects);
 
 
 
@@ -220,6 +255,20 @@ console.log(completePerson.age);
         to inspect your results.
 */
 
+var sumObj = {
+  a: 17,
+  b: 19,
+  result: undefined,
+  object: " "
+};
+
+function objectAddition(obj){
+  return sumObj.a + sumObj.b;
+
+}
+
+var sumObjResult = objectAddition(sumObj);
+console.log(sumObjResult);
 
 /*
    Print sum function and add as new key-value
@@ -239,6 +288,14 @@ console.log(completePerson.age);
  */
 
 
+function printObj(obj){
+  return sumObj.a + " + " + sumObj.b + " = " + sumObjResult;
+}
+
+sumObj.output = printObj(sumObjResult);
+console.log(sumObj.output);
+
+
 /*
    Putting stuff in `plainBox`
         Declare a function named putInPlainBox and a single parameter which will be an object. Within this function, write a 
@@ -248,6 +305,17 @@ console.log(completePerson.age);
         Invoke your function and pass in your object (which should be `plainBox`), store the result to a variable named 
         plainBoxResult and use `console.log` to inspect your results.
  */
+
+function putInPlainBox(obj){
+  for(var i = 0; i<11; i++){
+    var randomNumber = Math.floor(Math.random()*10)+1;
+    obj.push(randomNumber);
+    }
+    return obj;
+  }
+
+
+console.log(putInPlainBox(plainBox.contents));
 
 
 /*
