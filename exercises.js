@@ -67,6 +67,14 @@ kicks.buy();
             - add a property named `contents` and set it to be an empty array.
 */
 
+var plainBox = {};
+
+plainBox.color = "orange";
+plainBox.size = 14;
+plainBox.contents = []
+
+console.log(plainBox);
+
 
 /*
    Declare a variable named `stockCar` and create the following properties (key-value pairs) to the object:
@@ -77,6 +85,15 @@ kicks.buy();
             - add a key named `passengers` and set it to be an empty array.
 */
 
+var stockCar = {
+  model: "Chevy",
+  year: 2011,
+  automaticTransmission: true,
+  driver: null,
+  passengers: []
+
+}
+console.log(stockCar);
 
 /*
    Add new property inside a function
@@ -93,6 +110,20 @@ kicks.buy();
    the return value in a variable named `completePerson`. Use `console.log` three times to print the entire object, just 
    the value at `name`, and just the value at `age`.
  */
+
+var plainPerson = {};
+
+function buildPerson(person, nameString, age){
+  person.name = nameString;
+  person.age = age;
+  return person;
+}
+
+var completePerson = buildPerson(plainPerson, "Mellanie", 27);
+console.log(completePerson);
+console.log(completePerson.name);
+console.log(completePerson.age);
+
 
 
 /*
@@ -119,6 +150,61 @@ kicks.buy();
             =====
             ...
  */
+
+ var arrayOfObjects = [
+  {
+    id: 0,
+    date: "Monday Jan 25 2015 2:01 PM",
+    total: "279.38"
+  },
+  {
+    id: 1,
+    date: "Monday Jan 27 2015 11:31 AM",
+    total: "79.80"
+  },
+  {
+    id: 2,
+    date: "Monday Feb 1 2015 7:56 AM",
+    total: "15.62"
+  },
+  {
+    id: 3,
+    date: "Monday Feb 1 2015 9:43 AM",
+    total: "19.83"
+  },
+  {
+    id: 4,
+    date: "Monday Feb 1 2015 11:08 PM",
+    total: "56.69"
+  },
+  {
+    id: 5,
+    date: "Monday Feb 13 2015 10:22 AM",
+    total: "137.92"
+  },
+  {
+    id: 6,
+    date: "Monday Feb 14 2015 6:54 PM",
+    total: "938.65"
+  },
+  {
+    id: 7,
+    date: "Monday Feb 14 2015 7:17 PM",
+    total: "43.77"
+  },
+  {
+    id: 8,
+    date: "Monday Feb 14 2015 7:18 PM",
+    total: "28.54"
+  },
+  {
+    id: 9,
+    date: "Monday Feb 14 2015 7:18 PM",
+    total: "194.33"
+  }
+];
+
+
 
 
 /*
