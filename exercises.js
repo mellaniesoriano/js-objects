@@ -315,7 +315,8 @@ function putInPlainBox(obj){
   }
 
 
-console.log(putInPlainBox(plainBox.contents));
+putInPlainBox(plainBox.contents);
+console.log(plainBox);
 
 
 /*
@@ -329,6 +330,14 @@ console.log(putInPlainBox(plainBox.contents));
         Invoke your function and pass in your stockCar object, store the result to a variable named isAutomaticTransmission and use `console.log` to inspect your results.
  */
 
+function detectingTransmission (obj){
+  if(obj === true){
+    return "TRUE DAT";
+  }else{
+    return "NO BRUH";
+  }
+}
+console.log(detectingTransmission(stockCar.automaticTransmission));
 
 /*
    Who's driving this thing?!
