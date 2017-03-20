@@ -337,7 +337,8 @@ function detectingTransmission (obj){
     return "NO BRUH";
   }
 }
-console.log(detectingTransmission(stockCar.automaticTransmission));
+var isAutomaticTransmission = detectingTransmission(stockCar.automaticTransmission);
+console.log(isAutomaticTransmission);
 
 /*
    Who's driving this thing?!
